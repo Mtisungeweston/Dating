@@ -1,0 +1,286 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ff758c, #ffffff);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Menu Button */
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  background: #ff758c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: #e04a65;
+  transform: scale(1.1);
+}
+
+/* Side Panel */
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #242526;
+  color: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: left 0.5s ease-in-out;
+  z-index: 2000;
+}
+
+.side-panel.active {
+  left: 0;
+}
+
+.side-panel ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 50px 0 0;
+}
+
+.side-panel ul li {
+  margin: 15px 0;
+}
+
+.side-panel ul li a {
+  color: white;
+  text-decoration:wavy;
+  font-size: 18px;
+}
+
+/* Navigation Buttons */
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 15px;
+}
+
+.navigation button {
+  background: #ff758c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.navigation button:hover {
+  background: #e04a65;
+  transform: translateY(-5px);
+}
+
+/* Discover Section */
+.discover-area {
+  padding: 30px;
+  text-align: center;
+  animation: fade-in 1s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Member Card */
+.member-card {
+  display: flex;
+  align-items: center;
+  background: rgb(189, 181, 181);
+  border-radius: 50px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 90%;
+  animation: slide-in 0.5s ease;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.member-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 0;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.member-info {
+  text-align: left;
+}
+
+.member-actions {
+  margin-top: 10px;
+}
+
+.member-actions button {
+  background: #00b3ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.member-actions button:hover {
+  background: #e04a65;
+  transform: scale(1.1);
+}
+/* Subscription Pop-Up */
+.subscription-popup {
+  block-size: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.subscription-popup.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ff758c, #ffffff);
+  color: #333;
+}
+
+/* Menu Button */
+.menu-btn {
+  position: fixed;
+  top: 60px;
+  left: 15px;
+  z-index: 1100;
+  background: #660939;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Notification Bubble */
+.bubble {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 4px 8px;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Positioning for Buttons with Bubble */
+#navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+#navigation button {
+  position: relative;
+  background: #7dac4d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#navigation button:hover {
+  transform: scale(1.1);
+  background: #00ccff;
+}
+
+
+/* Side Panel */
+.side-panel {
+  position: fixed;
+  top: 100px;
+  left: -300px;
+  width: 100px;
+  height: 60%;
+  background-color: rgba(36, 37, 38, 0.8);
+  color: white;
+  padding: 20px;
+  transition: left 0.5s ease;
+  border-radius: 0 0px 0px 0;
+  z-index: 500;
+}
+
+.side-panel ul li a:hover {
+  color: #ff758c;
+  transition: color 0.3s ease;
+}
+
+/* Subscription Pop-Up */
+.subscription-popup {
+  position: fixed;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: rgb(0, 217, 255);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(10, 30, 40, 30);
+  z-index: 2000;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.subscription-popup.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 5;
+}

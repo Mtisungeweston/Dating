@@ -1,0 +1,427 @@
+
+<link rel="stylesheet" id="theme-css" href="css/theme-friendizo.css" media="all">
+<link rel="stylesheet" id="header" href="slide images/" media="all">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+		<meta name="application-name" content="friendizo">
+		<meta name="theme-color" content="#32825a">
+				<link rel="alternate" href="https://www.friendizo.com" hreflang="en-US">           
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FRIENDIZO</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+    
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                background-color: #333;
+                color: white;
+                position: relative;
+            }
+    
+            .logo {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #55ff00;
+                animation: pulse 2s infinite;
+            }
+    
+            @keyframes pulse {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+            }
+    
+            .toggle-button {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+                padding: 5px 10px;
+            }
+    
+            .menu-container {
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                background-color: #444;
+                color: white;
+                width: 200px;
+                display: none;
+                border-radius: 5px;
+                overflow: hidden;
+                z-index: 10;
+            }
+    
+            .menu-container a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+    
+            .menu-container a:hover {
+                background-color: #ff6f61;
+                color: white;
+            }
+    
+            @keyframes slideDown {
+                from {
+                    transform: translateY(-20px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes slideUp {
+                from {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateY(-20px);
+                    opacity: 0;
+                }
+            }
+    
+            .menu-container.show {
+                display: block;
+                animation: slideDown 0.3s ease;
+            }
+    
+            .menu-container.hide {
+                animation: slideUp 0.3s ease;
+                animation-fill-mode: forwards;
+            }
+    
+            @media (max-width: 768px) {
+                header {
+                    flex-wrap: wrap;
+                }
+    
+                .menu-container {
+                    width: 100%;
+                    right: 0;
+                }
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">FRIENDIZO</a></div>
+		
+        <button class="toggle-button" onclick="toggleMenu()">☰</button>
+    </header>
+        <div id="menu" class="menu-container">
+            <a href="#">Home</a>
+            <a href="Log in.html">Log In</a>
+            <a href="Sign up.html">Sign Up</a>
+        </div>
+        <script>
+            const menu = document.getElementById('menu');
+            let isMenuOpen = false;
+    
+            function toggleMenu() {
+                if (isMenuOpen) {
+                    menu.classList.remove('show');
+                    menu.classList.add('hide');
+                    setTimeout(() => menu.style.display = 'none', 300);
+                } else {
+                    menu.style.display = 'block';
+                    menu.classList.remove('hide');
+                    menu.classList.add('show');
+                }
+                isMenuOpen = !isMenuOpen;
+            }
+        </script>
+    </body>
+    </html>
+         
+<link rel="stylesheet" id="theme-css" href="css/theme-friendizo.css" media="all">
+<link rel="stylesheet" id="header" href="slide images/" media="all">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+		<meta name="application-name" content="friendizo">
+		<meta name="theme-color" content="#32825a">
+				<link rel="alternate" href="https://www.friendizo.com" hreflang="en-US">           
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .signup-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .google-btn {
+            width: 100%;
+            background-color: #4285F4;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .google-btn img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .google-btn:hover {
+            background-color: #357AE8;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+         
+         <section class="lp-header has-transition has-mobile-gradient has-main-100-background-color alignleft" style="cursor: ;">
+    
+            <div class="image-container active" style="background-color: transparent"><picture>
+                            <source media="(min-width: 768px)" srcset="images/homepage-uk-female-2023-02.jpg">
+                            <source srcset="images/homepage-uk-female-2023-02-828x600.jpg">
+                            <img decoding="async" width="828" height="600" src="images/homepage-uk-female-2023-02-828x600.jpg" alt="" loading="eager" fetchpriority="high">
+                        </picture></div><div class="image-container" style="background-color: transparent"><picture>
+                            <source media="(min-width: 768px)" srcset="images/homepage-uk-male-2023-02.jpg">
+                            <source srcset="images/homepage-uk-male-2023-02-828x600.jpg">
+                            <img decoding="async" width="828" height="600" src="images/homepage-uk-male-2023-02-828x600.jpg" alt="" loading="lazy" fetchpriority="low">
+                        </picture></div>
+            <div class="block-content">
+                <div class="inner-blocks">
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signupForm" onsubmit="return validateForm()">
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <span id="usernameError" class="error"></span>
+            </div>
+            
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <span id="emailError" class="error"></span>
+            </div>
+            
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <span id="passwordError" class="error"></span>
+            </div>
+            
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                <span id="confirmPasswordError" class="error"></span>
+            </div>
+            
+            <!-- Gender -->
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <!-- Country -->
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <!-- Add the full list of countries dynamically -->
+                </select>
+            </div>
+            
+            <!-- Interest -->
+            <div class="form-group">
+                <label for="interest">Interest</label>
+                <select id="interest" name="interest" required>
+                    <option value="">Select your interest</option>
+                    <option value="Men">Men</option>
+                    <option value="Women">Women</option>
+                    <option value="Both">Both</option>
+                </select>
+            </div>
+            <!-- Religion -->
+<div class="form-group">
+    <label for="religion">Religion</label>
+    <select id="religion" name="religion" required>
+        <option value="">Select your religion</option>
+        <option value="Christianity">Christianity</option>
+        <option value="Islam">Islam</option>
+        <option value="Hinduism">Hinduism</option>
+        <option value="Buddhism">Buddhism</option>
+        <option value="Judaism">Judaism</option>
+        <option value="Other">Other</option>
+    </select>
+</div>
+
+            
+            <!-- Type of Relationship -->
+            <div class="form-group">
+                <label for="relationshipType">Type of Relationship</label>
+                <select id="relationshipType" name="relationshipType" required>
+                    <option value="">Select relationship type</option>
+                    <option value="Serious">Serious</option>
+                    <option value="Casual">Casual</option>
+                    <option value="Friendship">Friendship</option>
+                </select>
+            </div>
+            
+            <!-- Used a Dating Site Before -->
+            <div class="form-group">
+                <label for="usedDatingSite">Have you used a dating site before?</label>
+                <select id="usedDatingSite" name="usedDatingSite" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        // Dynamically populate country list
+        const countrySelect = document.getElementById('country');
+        const countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Congo-Brazzaville)", "Congo (Democratic Republic) (Congo-Kinshasa)", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar (formerly Burma)", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe",];
+        countries.forEach(country => {
+            const option = document.createElement('option');
+            option.value = country;
+            option.textContent = country;
+            countrySelect.appendChild(option);
+        });
+
+        function validateForm() {
+            let isValid = true;
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            const usernameError = document.getElementById('usernameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+            usernameError.textContent = '';
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            confirmPasswordError.textContent = '';
+
+            if (username.length < 3) {
+                usernameError.textContent = 'Username must be at least 3 characters.';
+                isValid = false;
+            }
+
+            if (!email.includes('@')) {
+                emailError.textContent = 'Please enter a valid email.';
+                isValid = false;
+            }
+
+            if (password.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters.';
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                confirmPasswordError.textContent = 'Passwords do not match.';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>

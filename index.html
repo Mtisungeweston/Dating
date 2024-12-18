@@ -1,0 +1,320 @@
+<link rel="stylesheet" id="theme-css" href="css/theme-friendizo.css" media="all">
+<link rel="stylesheet" id="header" href="css/theme-friendizo.css" media="all">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+		<meta name="application-name" content="friendizo">
+		<meta name="theme-color" content="#32825a">
+				<link rel="alternate" href="https://www.friendizo.com" hreflang="en-US">			
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRIENDIZO</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #bbff00;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .toggle-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .menu-container {
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background-color: #444;
+            color: white;
+            width: 200px;
+            display: none;
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .menu-container a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .menu-container a:hover {
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+        }
+
+        .menu-container.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        .menu-container.hide {
+            animation: slideUp 0.3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+            }
+
+            .menu-container {
+                width: 100%;
+                right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">FRIENDIZO</a></div>
+		
+        <button class="toggle-button" onclick="toggleMenu()">☰</button>
+    </header>
+    <div id="menu" class="menu-container">
+        
+        <a href="index.html">Home</a>
+        <a href="Log-in-form.html">Log In</a>
+        <a href="Registration-form.html">Sign Up</a>
+
+    </div>
+    <script>
+        const menu = document.getElementById('menu');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            if (isMenuOpen) {
+                menu.classList.remove('show');
+                menu.classList.add('hide');
+                setTimeout(() => menu.style.display = 'none', 300);
+            } else {
+                menu.style.display = 'block';
+                menu.classList.remove('hide');
+                menu.classList.add('show');
+            }
+            isMenuOpen = !isMenuOpen;
+        }
+    </script>
+</body>
+
+	<section class="lp-header has-transition has-mobile-gradient has-main-100-background-color alignleft">
+		<div class="image-container active" style="background-color: transparent; transition: opacity 2s ease-in-out;">
+			<picture>
+				<source media="(min-width: 768px)" srcset="images/homepage-uk-female-2023-02.jpg">
+				<source srcset="images/date-ideas-1024x427.jpg">
+				<img decoding="async" width="828" height="600" src="images/date-ideas-1024x427.jpg" alt="" loading="eager" fetchpriority="high">
+			</picture>
+		</div>
+		<div class="image-container" style="background-color: transparent; transition: opacity 2s ease-in-out;">
+			<picture>
+				<source media="(min-width: 768px)" srcset="images/homepage-uk-male-2023-02.jpg">
+				<source srcset="images/homepage-uk-male-2023-02-828x600.jpg">
+				<img decoding="async" width="828" height="600" src="images/homepage-uk-male-2023-02-828x600.jpg" alt="" loading="lazy" fetchpriority="low">
+			</picture>
+		</div>
+		<div class="block-content">
+			<div class="inner-blocks">
+	
+				<div class="wp-block-group is-style-claim is-layout-flow wp-block-group-is-layout-flow">
+					<div class="wp-block-group__inner-container">
+						<figure class="wp-block-image aligncenter size-full is-resized is-style-drop-shadow">
+							<img decoding="async" src="images/GWGY.svg" alt="" class="wp-image-193" style="width:600px">
+						</figure>
+						<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+					</div>
+				</div>
+<div class="wp-block-psg-intent-questions"><div class="container"><div class="wrapper">
+<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+
+
+    <div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained" id="question-2" style="display: block;">
+        <div class="wp-block-group__inner-container">
+            <p class="has-text-align-center is-style-heading" style="margin-bottom:var(---wp---preset---spacing---20); font-size:80px; font-style:normal; font-weight:500">
+                Start <strong>free</strong> today
+            </p>
+            <div class="wp-block-button is-style-premium" style="display: flex; justify-content: center; gap: 20px;">
+                <a class="wp-block-button__link wp-element-button" href="Registration-form.html">Join now</a>
+                <a class="wp-block-button__link wp-element-button" href="Log-in-form.html">Log In</a>
+            </div>
+        </div>
+    </div>
+    
+
+
+<script>
+function showNextQuestion(nextQuestionId) {
+    // Hide all sections
+    document.querySelectorAll('.wp-block-group, .wp-block-psg-intent-question').forEach(el => {
+        el.style.display = 'none';
+    });
+    // Show the targeted section
+    document.getElementById(nextQuestionId).style.display = 'block';
+}
+</script>
+
+<div class="hidden"></div>
+
+</form>
+</div></div>
+</div></div></div>
+
+<div class="seal">
+	<div class="wp-block-image">
+		<figure class="alignright">
+	</div>
+</div>
+
+		</div>
+	</div>
+</section>
+
+
+
+<div class="wp-block-group has-main-100-dark-background-color has-background is-layout-flow wp-block-group-is-layout-flow is-mobile-visible" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--16);padding-bottom:var(--wp--preset--spacing--16)"><div class="wp-block-group__inner-container">
+<div class="seal">
+	<div class="wp-block-image">
+		<figure class="aligncenter">
+	</div>
+</div>
+</div></div>
+
+
+
+<div class="wp-block-group alignwide benefits has-main-200-color has-text-color has-background is-layout-flow wp-block-group-is-layout-flow" id="benefits" style="background-color:#1e5a32"><div class="wp-block-group__inner-container">
+<div class="wp-block-columns md is-layout-flex wp-block-columns md-is-layout-flex">
+<div class="wp-block-column is-style-default has-background is-layout-flow wp-block-column-is-layout-flow" style="background-color:#1e5a32">
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="images/Double-Heart.svg" alt="" class="wp-image-166" style="width:32px"></figure>
+
+
+
+<p class="has-text-align-center is-style-heading" style="margin-top:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--10);font-size:40px;font-style:normal;font-weight:700">The #1 trusted dating app</p>
+
+
+
+<p class="has-text-align-center" style="margin-bottom:0;font-size:12px">Join Millions Around The World</p>
+</div>
+
+
+
+<div class="wp-block-column has-main-100-background-color has-background is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="images/Double-Heart.svg" alt="" class="wp-image-166" style="width:32px"></figure>
+
+
+
+<p class="has-text-align-center is-style-heading" style="margin-top:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--10);font-size:40px;font-style:normal;font-weight:700">Every 1 hours, someone finds love on friendizo</p>
+
+
+
+<p class="has-text-align-center" style="margin-bottom:0;font-size:12px">friendizo user data</p>
+</div>
+
+
+
+<div class="wp-block-column has-background is-layout-flow wp-block-column-is-layout-flow" style="background-color:#1e5a32">
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="images/Double-Heart.svg" alt="" class="wp-image-166" style="width:32px"></figure>
+
+
+
+<p class="has-text-align-center is-style-heading" style="margin-top:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--10);font-size:40px;font-style:normal;font-weight:700">Highest quality dating pool</p>
+
+
+
+<p class="has-text-align-center" style="margin-bottom:0;font-size:12px">Platform where individuals can find exceptional and like-minded people for meaningful connections and relationships</p>
+</div>
+</div>
+</div></div>
+
+</head>
+
+</div>
+
+
+<div id="Facts" class="wp-block-group is-style-default has-main-200-background-color has-background is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container">
+    
+<h1 class="wp-block-heading has-text-align-center has-main-100-color has-text-color" id="our-dating-site-helps-millions-find-real-love">Our dating site has helped couples find love</h1>
+    </div>
+
+    
+<div class="login-container">
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-and-conditions.html">Terms & Conditions</a>
+                    <a href="#newsletter">Subscribe to Newsletter</a>
+                </div>
+                <div class="footer-newsletter" id="newsletter">
+                    <form action="#" method="post" class="newsletter-form">
+                        <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Enter your email to stay updated" 
+                            required 
+                            class="newsletter-input">
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-rights">
+                    <p>© 2024 FRIENDIZO. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+
