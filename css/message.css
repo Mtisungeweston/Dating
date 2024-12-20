@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef1f7;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .messages-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .threads-list {
+    width: 30%;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    animation: slideLeft 0.8s ease-out;
+  }
+  
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .thread-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .thread-item:hover {
+    background: #e6e9f0;
+    transform: scale(1.03);
+  }
+  
+  .thread-item.active {
+    background: #d0d6e3;
+  }
+  
+  .chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px;
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .message-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 60%;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .message-item.sent {
+    background: #d9fdd3;
+    align-self: flex-end;
+    animation: slideRight 0.6s ease-out;
+  }
+  
+  .message-item.received {
+    background: #f1f0f0;
+    align-self: flex-start;
+    animation: slideLeft 0.6s ease-out;
+  }
+  
+  @keyframes slideRight {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .message-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .message-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .message-input button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .message-input button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+  }
+  
