@@ -4,7 +4,7 @@ session_start(); // Start a session to store user information
 // Database connection details
 $servername = "localhost"; // Change to your database server
 $username = "root"; // Change to your database username
-$password = "91972355"; // Change to your database password
+$password = ""; // Change to your database password
 $dbname = "friendizo"; // Change to your database name
 
 // Create connection

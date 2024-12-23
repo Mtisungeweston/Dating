@@ -8,7 +8,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',  // Replace with your MySQL username
   password: '',  // Replace with your MySQL password
-  database: 'my_database',  // The name of your database
+  database: 'friendizo',  // The name of your database
 });
 
 // Test the database connection
@@ -40,6 +40,6 @@ app.post('/login', (req, res) => {
 });
 
 // Start the server on port 3000
-app.listen(3000, () => {
+app.listen(3307, () => {
   console.log('Server running on http://localhost:3000');
 });

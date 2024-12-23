@@ -19,6 +19,6 @@ try {
     // echo "Database connection successful!";
 } catch (PDOException $e) {
     // Handle connection error
-    die("Database connection failed: " . $e->getMessage());
+    die("Database connection <failed: " . $e->getMessage());
 }
 ?>
