@@ -72,8 +72,8 @@
     display: block;
     text-align: left;
     margin: 0 auto;
-    padding: 80px;
-    border-radius: 0px;
+    padding: 100px;
+    border-radius: 50px;
 }
 
 /* Heading styles */
@@ -88,9 +88,10 @@
 /* Buttons container styles */
 .wp-block-button.is-style-premium {
     display: flex;
-    justify-content: left;
-    gap: 10px;
+    justify-content: center;
+    gap: 40px; /* Maintain separation between buttons */
     margin-top: 20px;
+    flex-wrap:nowrap; /* Ensures buttons stay organized on smaller screens */
 }
 
 /* Button styles */
@@ -100,29 +101,38 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    color: #ffffff;
-    background-color: #0073e6;
+    color: #f8eb00; /* Consistent text color */
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    transform: scale(1); /* Default scale */
 }
 
+/* Fixed background colors */
+.wp-block-button__link:first-child {
+    background-color: #005bb5; /* Blue color that was previously on hover */
+}
+
+.wp-block-button__link:last-child {
+    background-color: #b39e00; /* Golden color that was previously on hover */
+}
+
+/* Hover effects (optional scaling) */
 .wp-block-button__link:hover {
-    background-color: #005bb5;
-    transform: translateY(-2px);
+    transform: scale(1.05); /* Subtle scaling effect */
 }
 
+/* Active states */
 .wp-block-button__link:active {
-    background-color: #004494;
-    transform: translateY(0);
+    transform: translateY(2px); /* Slight downward motion on click */
 }
 
-/* Styling for specific links */
-.wp-block-button__link[href="Registration-form.html"] {
-    background-color: #28a745;
+/* Ensure separation on smaller screens */
+@media (max-width: 768px) {
+    .wp-block-button.is-style-premium {
+        gap: 20px; /* Reduced gap for smaller devices */
+    }
 }
 
-.wp-block-button__link[href="Log-in-form.html"] {
-    background-color: #abb817;
 }
 
 
@@ -173,7 +183,7 @@
 
 /* Button hover effect */
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #b39e00;
 }
 
 /* Form container padding */
@@ -188,4 +198,15 @@
     margin: 5px 5px 10px;
     border: 2px solid #0099ff;
     border-radius: 5px;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('path-to-your-image.jpg'); /* Replace with the actual image path */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: top center; /* Aligns the image to the top and centers it horizontally */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Optional: Keeps the background fixed during scrolling */
 }
