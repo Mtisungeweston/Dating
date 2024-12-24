@@ -231,7 +231,7 @@ body {
             color: red;
             font-size: 14px;
         }
-        <style>
+
     .lp-header {
         position: relative;
         width: 100%;

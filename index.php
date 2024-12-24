@@ -4,7 +4,7 @@
 		<link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
 		<meta name="application-name" content="friendizo">
 		<meta name="theme-color" content="#32825a">
-				<link rel="alternate" href="https://www.friendizo.com" hreflang="en-US">			
+				<link rel="alternate" href="https://www.friendizo.com" hreflang="en-US">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -131,8 +131,8 @@
     <div id="menu" class="menu-container">
         
         <a href="index.html">Home</a>
-        <a href="Pages/Log-in-form.html">Log In</a>
-        <a href="Pages/Registration-form.html">Sign Up</a>
+        <a href="Pages/Log-in-form.php">Log In</a>
+        <a href="Pages/Registration-form.php">Sign Up</a>
 
     </div>
     <script>
@@ -190,8 +190,8 @@
                 Start <strong>free</strong> today
             </p>
             <div class="wp-block-button is-style-premium" style="display: flex; justify-content: center; gap: 20px;">
-                <a class="wp-block-button__link wp-element-button" href="Pages/Registration-form.html">Join now</a>
-                <a class="wp-block-button__link wp-element-button" href="Pages/Log-in-form.html">Log In</a>
+                <a class="wp-block-button__link wp-element-button" href="Pages/Registration-form.php">Join now</a>
+                <a class="wp-block-button__link wp-element-button" href="Pages/Log-in-form.php">Log In</a>
             </div>
         </div>
     </div>
@@ -302,11 +302,11 @@ function showNextQuestion(nextQuestionId) {
                 </div>
                 <div class="footer-newsletter" id="newsletter">
                     <form action="#" method="post" class="newsletter-form">
-                        <input 
-                            type="email" 
-                            name="email" 
-                            placeholder="Enter your email to stay updated" 
-                            required 
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email to stay updated"
+                            required
                             class="newsletter-input">
                         <button type="submit" class="newsletter-btn">Subscribe</button>
                     </form>

@@ -56,9 +56,9 @@
     <!-- Side Panel -->
     <div id="side-panel" class="side-panel">
         <ul>
-            <li><a href="#profile">Profile</a></li>
+            <li><a href="/backend/update_profile.php">Profile</a></li>
             <li><a href="#settings">Settings</a></li>
-            <li><a href="#logout">Log Out</a></li>
+            <li><a href="/backend/logout.php">Log Out</a></li>
         </ul>
     </div>
 
