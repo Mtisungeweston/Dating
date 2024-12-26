@@ -260,7 +260,6 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Log In</h2>
         <form id="loginForm" onsubmit="return validateLoginForm()">
             <div class="form-group">
                 <label for="email">Email</label>
@@ -271,13 +270,32 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 <span id="passwordError" class="error"></span>
+                <!-- Show/Hide Password Toggle -->
+                <span class="toggle-password" onclick="togglePassword()" style="cursor: pointer; color: blue; margin-left: 10px;">Show</span>
             </div>
             <div class="forgot-password">
                 <a href="#" onclick="openResetPasswordModal()">Forgot Password?</a>
             </div>
             <button type="submit" class="btn">Log In</button>
         </form>
+        
+        <!-- JavaScript for Show/Hide Password -->
+        <script>
+            function togglePassword() {
+                const passwordField = document.getElementById('password');
+                const toggleButton = document.querySelector('.toggle-password');
+            
+                if (passwordField.type === 'password') {
+                    passwordField.type = 'text';
+                    toggleButton.textContent = 'Hide';
+                } else {
+                    passwordField.type = 'password';
+                    toggleButton.textContent = 'Show';
+                }
+            }
+        </script>
     </div>
+    
 
     <!-- Password Reset Modal -->
     <div id="resetPasswordModal" class="modal" style="display:none;">
