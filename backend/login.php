@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_email'] = $user['email'];
 
             // Redirect to the member area or dashboard
-            header("Location: dashboard.php");
+            header(header: "Location: dashboard.php"); // Specify the correct path
             exit();
         } else {
             echo "Invalid password.";

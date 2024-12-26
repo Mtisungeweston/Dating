@@ -1,3 +1,5 @@
+-- Active: 1735031682346@@localhost@3307@mysql
+-- Active: 1735031682346@@localhost@3307@friendizotive: 1735031682346@@localhost@3307@information_schema
 <?php
 session_start();
 

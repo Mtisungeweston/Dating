@@ -1,6 +1,0 @@
-{
-    "dataworkspace.excludedProjects": [
-        "Friendizo/Friendizo.sqlproj"
-    ],
-    "sqltools.connections": []
-}
