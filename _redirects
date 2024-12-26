@@ -1,1 +1,9 @@
+# Redirect all routes to the index.html for SPA
 /*    /index.html   200
+
+# Explicitly map routes to their respective HTML files
+/privacy-policy   /privacy-policy.html   200
+/terms-and-conditions   /terms-and-conditions.html   200
+
+# Catch-all redirect for undefined routes (optional)
+404.html
